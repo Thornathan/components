@@ -1,8 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import CommentDetail from "./CommentDetail";
 
 const App = () => {
-  return <div>Hi There!</div>;
+  return (
+    <div className="ui container comments">
+      <CommentDetail
+        author="Sam"
+        timeAgo="Today at 4:45PM"
+        content="Nice blog post"
+      />
+      <CommentDetail
+        author="Alex"
+        timeAgo="Today at 2:00AM"
+        content="I like the content"
+      />
+      <CommentDetail
+        author="Jane"
+        timeAgo="Yesterday at 5:00PM"
+        content="I like the writing"
+      />
+    </div>
+  );
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
